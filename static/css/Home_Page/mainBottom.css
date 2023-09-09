@@ -1,0 +1,6 @@
+.bottom {
+    height: 20px;
+    background-color: rgb(218, 152, 28);
+    bottom: 0px;
+    position: sticky;
+}
