@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        form input{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="{% url 'authenticate:creating_user' %}" method="post" class="form">
+            {% csrf_token %}
+            <input type="text" name="username" id="" placeholder="enter username">
+            <input type="email" name="email" placeholder="enter your email">
+            <input type="password" name="password" id="" placeholder="enter passoword">
+            <input type="password" name="password2" id="" placeholder="re-enter passoword">
+            <input type="submit" value="SignUp">
+        </form>
+    </div>
+</body>
+</html>
